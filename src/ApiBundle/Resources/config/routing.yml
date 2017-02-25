@@ -1,0 +1,11 @@
+container:
+  type: rest
+  resource: ApiBundle\Controller\ContainerController
+
+host:
+  type: rest
+  resource: ApiBundle\Controller\HostController
+
+analysis:
+  type: rest
+  resource: ApiBundle\Controller\AnalysisController

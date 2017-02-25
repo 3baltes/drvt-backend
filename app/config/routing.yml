@@ -1,0 +1,6 @@
+core:
+  resource: "@CoreBundle/Resources/config/routing.yml"
+
+api:
+  type: rest
+  resource: "@ApiBundle/Resources/config/routing.yml"
