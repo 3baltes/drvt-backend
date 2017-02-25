@@ -16,7 +16,7 @@ The application is available via [Docker](https://hub.docker.com/r/3baltes/drvt-
 following command on any docker host: 
 
 ```
-docker run -d -p8081:80 3baltes/drvt-backend
+docker run -d -p8081:80 --name backend 3baltes/drvt-backend
 ```
    
    
