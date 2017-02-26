@@ -26,13 +26,13 @@ class HostCommunicator
         try {
             $response = $client->request('GET', $host->getAddress().'/api/'.self::API_VERSION.'/machine',['timeout' => 3]);
         } catch (ConnectException $e){
-            throw new HostConnectionException("No connection to host (".$host->getAddress().")", 0, $e);
+            throw new HostConnectionException("Kann keine Verbindung zum Host herstellen (".$host->getAddress().")", 0, $e);
         }
 
 
 
         if($response->getStatusCode() != Response::HTTP_OK){
-            throw new HostConnectionException("The connection to host (".$host->getAddress().") was not successful");
+            throw new HostConnectionException("Bei der Verbindung zum Host ist ein Fehler aufgetreten (".$host->getAddress().")");
         }
 
         return json_decode($response->getBody());

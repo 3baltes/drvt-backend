@@ -66,7 +66,7 @@ class HostController extends FOSRestController
                 ->setAddress($request->request->get('address'))
                 ->setName($request->request->get('name'))
                 ->setCreatedAt(new \DateTime())
-                ->setDescription('Test Description')
+                ->setDescription($request->request->get('description'))
             ;
         }
 

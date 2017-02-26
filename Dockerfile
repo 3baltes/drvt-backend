@@ -26,3 +26,4 @@ RUN php bin/console doctrine:schema:create
 
 EXPOSE 80
 CMD php bin/console server:run 0.0.0.0:80
+
